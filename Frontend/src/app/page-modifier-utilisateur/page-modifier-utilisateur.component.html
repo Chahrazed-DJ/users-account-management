@@ -1,0 +1,65 @@
+<nav class="navbar navbar-light">
+  <button type="button" class="btn btn-primary mybtn" (click)="navigateTo('administrateur/rechercherutilisateur')">
+    <i class="bi bi-arrow-left bold-icon"></i>
+  </button>
+</nav>
+
+<div class="container mt-5">
+  <div class="card text-center">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-2 ">
+            <label for="nom" class="form-label ">{{'nomUtilisateur'|translate}} </label>
+            <input type="text" class="form-control input-custom" id="nom" name="nom"
+              placeholder="{{'nomUtilisateur'|translate}} " required [(ngModel)]="utilisateur.nom">
+            <div *ngIf="!utilisateur.nom && isFormSubmitted">
+              <h6>{{'nomRequis'|translate}} </h6>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label">{{'email'|translate}} </label>
+            <input type="email" class="form-control input-custom" id="email" name="email"
+              placeholder="{{'email'|translate}} " required [(ngModel)]="utilisateur.email">
+            <div *ngIf="!utilisateur.email && isFormSubmitted">
+              <h6>{{'emailRequis'|translate}} </h6>
+            </div>
+            <div *ngIf="!isValidEmail()&& utilisateur.email" class="text-danger">
+              {{'emailValide'|translate}}
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label">{{'mots de passe'|translate}} </label>
+            <input type="password" class="form-control input-custom" id="password" name="password"
+              placeholder="{{'mots de passe'|translate}} " required [(ngModel)]="utilisateur.password">
+            <div *ngIf="!utilisateur.password && isFormSubmitted">
+              <h6>{{'mdpRequis'|translate}} </h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-check form-check-inline checkbox-shadow">
+                <label class="form-check-label" for="checkbox1">{{'admin'|translate}} </label>
+                <input class="form-check-input" type="checkbox" id="checkbox1" [(ngModel)]="R1" name="R1">
+              </div>
+              <div class="form-check form-check-inline checkbox-shadow">
+                <label class="form-check-label" for="checkbox2">{{'utilisateur'|translate}} </label>
+                <input class="form-check-input" type="checkbox" id="checkbox2" [(ngModel)]="R2" name="R2">
+              </div>
+              <div class="form-check form-check-inline checkbox-shadow">
+                <label class="form-check-label" for="checkbox3">{{'superUtilisateur'|translate}} </label>
+                <input class="form-check-input" type="checkbox" id="checkbox3" [(ngModel)]="R3" name="R3">
+              </div>
+              <div class="form-check form-check-inline checkbox-shadow">
+                <label class="form-check-label" for="checkbox4">{{'nouveau'|translate}} </label>
+                <input class="form-check-input" type="checkbox" id="checkbox4" [(ngModel)]="R4" name="R4">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success"> {{'modifier'|translate}} </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

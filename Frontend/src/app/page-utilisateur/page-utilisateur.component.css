@@ -1,0 +1,32 @@
+.navbar {
+  background-color: #1C449C !important;
+  margin-bottom: 10px !important;
+  height: 60px !important;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-toggler-icon,
+.navbar-light .navbar-text,
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  text-align: center;
+}
+
+.navbar-nav li.active a {
+
+  color: black !important;
+  font-size: 1.5em;
+
+}
+
+.navbar-nav .nav-link {
+  transition: font-size 0.3s;
+  color: white;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  font-size: 24px;
+  color: #000;
+}

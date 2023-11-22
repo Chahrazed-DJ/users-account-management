@@ -1,0 +1,71 @@
+.container {
+  margin-top: 10px !important;
+  max-width: 1000px;
+  box-shadow: 0 10px 8px #1c459c60;
+}
+
+input::placeholder {
+  color: #1c459c60;
+  font-size: 15px;
+}
+
+.text-danger {
+  font-size: 10px;
+}
+
+.card {
+  border: none;
+  margin-left: 30px;
+}
+
+label,
+p {
+  color: #1C449C;
+}
+
+label {
+  text-align: left;
+  
+}
+
+form>div {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.bienvenu {
+  font-size: 35px;
+}
+
+.btn-primary {
+  background-color: #1C449C;
+  border-color: #1C449C;
+  align-self: flex-end;
+}
+
+.mybtn {
+  border-radius: 50%;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: red !important;
+  font-size: 14px !important;
+}
+
+a:hover {
+  color: black !important;
+  cursor: pointer !important;
+}
+
+.bold-icon {
+  font-weight: bolder;
+  font-size: 20px;
+
+}
+
+h6 {
+  color: rgb(170, 30, 30);
+}

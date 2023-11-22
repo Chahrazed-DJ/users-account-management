@@ -1,0 +1,52 @@
+<nav class="navbar navbar-light">
+  <button type="button" class="btn btn-primary mybtn" (click)="navigateTo('')">
+    <i class="bi bi-arrow-left bold-icon"></i>
+  </button>
+</nav>
+<div class="container mt-5">
+  <div class="card text-center">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+        <img src="assets\registration picture.jpg" alt="Logo" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6">
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-2 bienvenu">
+            <label for="nom" class="form-label">{{'bienvenu'|translate}}</label>
+          </div>
+          <div class="mb-2">
+            <label for="nom" class="form-label">{{'nomUtilisateur'|translate}} *</label>
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="{{'nomUtilisateur'|translate}}"
+              required [(ngModel)]="utilisateur.nom">
+            <div *ngIf="!utilisateur.nom && isFormSubmitted">
+              <h6> {{'nomRequis'|translate}}</h6>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label">{{'email'|translate}} *</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="{{'email'|translate}}"
+              required [(ngModel)]="utilisateur.email">
+            <div *ngIf="!utilisateur.email && isFormSubmitted">
+              <h6>{{'emailRequis'|translate}}</h6>
+            </div>
+            <div *ngIf="!isValidEmail()&& utilisateur.email" class="text-danger">
+              {{'emailValide'|translate}}
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label">{{'mots de passe'|translate}} *</label>
+            <input type="password" class="form-control" id="password" name="password"
+              placeholder="{{'mots de passe'|translate}}" required [(ngModel)]="utilisateur.password">
+            <div *ngIf="!utilisateur.password && isFormSubmitted">
+              <h6>{{'mdpRequis'|translate}}</h6>
+            </div>
+
+          </div>
+          <p class="text-muted"><a (click)="navigateTo('connexion')">{{'jaiCompte'|translate}}</a></p>
+          <button type="submit" class="btn btn-primary"> {{'labelEnregistrer'|translate}} </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

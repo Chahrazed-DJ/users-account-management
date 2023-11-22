@@ -1,0 +1,68 @@
+.mybtn {
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.btn-primary {
+  background-color: #1C449C;
+  border-color: #1C449C;
+  align-self: flex-end;
+}
+
+.bold-icon {
+  font-weight: bolder;
+  font-size: 20px;
+
+}
+
+
+.container {
+  max-width: 1000px;
+}
+
+input::placeholder {
+  color: #1c459c60;
+  font-size: 15px;
+}
+
+.text-danger {
+  font-size: 10px;
+}
+
+.card {
+  border: none;
+}
+
+label,
+p {
+  color: #1C449C;
+}
+
+label {
+  text-align: left;
+  font-size: 18px;
+}
+
+form>div {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.input-custom {
+  box-shadow: 0 4px 8px #1c459c42;
+  border: none;
+  border-radius: 2px !important;
+  padding: 15px;
+}
+
+
+.checkbox-shadow {
+  box-shadow: 0 4px 8px r#1c459c42;
+  margin: 15px;
+
+}
+
+h6 {
+  color: rgb(179, 42, 42);
+}

@@ -1,0 +1,62 @@
+  .container {
+    margin-top: 80px !important;
+    max-width: 1000px;
+
+  }
+
+  input::placeholder {
+    color: #1c459c60;
+    font-size: 15px;
+  }
+
+  .text-danger {
+    font-size: 10px;
+  }
+
+  .card {
+    border: none;
+  }
+
+  label,
+  p {
+    color: #1C449C;
+  }
+
+  label {
+    text-align: left;
+    
+  }
+
+  form>div {
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-custom {
+    box-shadow: 0 4px 8px #1c459c42;
+  
+  }
+
+  h5 {
+    color: #1C449C;
+  }
+
+  .mybtn2 {
+    border: none;
+    margin-right: 10px;
+    margin-top: 12px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.416) !important;
+    font-size: 10px;
+  }
+
+  .input-custom {
+    box-shadow: 0 4px 8px #1c459c42;
+    border: none;
+    border-radius: 2px !important;
+    padding: 15px;
+  }
+
+  h6 {
+    color: rgb(176, 27, 27);
+  }

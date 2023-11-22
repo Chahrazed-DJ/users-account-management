@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <ul class="navbar-nav">
+    <li class="nav-item" *ngFor="let item of navItems; let i = index" [ngClass]="{'active': i === activeItemIndex}"
+      (click)="setActiveItem(i)">
+      <a class="nav-link text-white" [routerLink]="item.link">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="detailsprofil" routerLinkActive="active">
+            <img src="assets\Group.png" alt="Mon Image" width="30" height="30">
+            <small class="d-block">Mon profil</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<router-outlet></router-outlet>

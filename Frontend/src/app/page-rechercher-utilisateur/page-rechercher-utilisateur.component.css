@@ -1,0 +1,48 @@
+.card {
+  border: none;
+}
+
+.card-custom {
+  box-shadow: 0 4px 8px #1c459c42;
+
+}
+
+.card-custom input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1.5px solid #1c459c5a;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+h5 {
+  margin-left: 20px;
+  color: #1c459c;
+}
+
+input::placeholder {
+  color: #1c459c60;
+  font-size: 15px;
+}
+
+th {
+  color: #1c459c60;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+
+}
+
+.inline-elements {
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-right: 5px;
+}

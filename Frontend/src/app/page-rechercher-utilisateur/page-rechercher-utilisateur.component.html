@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mb-4">
+      <div class="card card-custom">
+        <div class="card-body">
+          <h5 class="card-title">{{'gestion'|translate}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mb-4">
+      <div class="card card-custom">
+        <div class="card-body">
+          <input type="text" class="form-control input-with-border"
+            placeholder="🔎 {{'rechercher'|translate}}.........." [(ngModel)]="searchEmail" (input)="searchUsers()">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 mb-4">
+    <div class="card card-custom">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th> {{'nomUtilisateur'|translate}} </th>
+              <th> {{'email'|translate}}</th>
+              <th> {{'mots de passe'|translate}} </th>
+              <th> {{'roles'|translate}} </th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of filteredUsers">
+              <td>{{ user.nom}} </td>
+              <td> {{ user.email }} </td>
+              <td> * * * * * * * * * * </td>
+              <td>
+                <div class="inline-elements">
+                  <p *ngFor="let role of user.roles">
+                    {{ role.nom }}/ </p>
+                </div>
+              </td>
+              <td>
+                <button *ngIf="user.id" class="btn btn-success"
+                  (click)="navigateTo('administrateur/modifierutilisateur',user.id)"> {{'modifier'|translate}} </button>
+
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

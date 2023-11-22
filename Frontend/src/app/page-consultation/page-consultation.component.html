@@ -1,0 +1,46 @@
+<div class="background-image">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+
+          <span class="form-inline">
+            <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+              <option *ngFor="let language of supportedLanguages" [value]="language"
+                [selected]="language === currentLang">
+                {{ language }}
+              </option>
+            </select>
+          </span>
+
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="enregistrer" routerLinkActive="active">{{'labelEnregistrer' | translate}} </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="connexion" routerLinkActive="active">{{'labelConnecter' | translate}} </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link small" href="#" (click)="openEmailModal()">{{'labelMdpOublie' | translate}} </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="bottom-left-text">
+    <p>{{'labelGC' | translate}}</p>
+    <p>{{'labelU' | translate}}</p>
+  </div>
+
+  <ng-template #emailModal let-modal>
+    <div class="modal-body">
+      <h5 class="modal-title">{{'SaisiEmail' | translate}}</h5>
+      <input type="email" class="form-control" placeholder="{{'email' | translate}}" [(ngModel)]="userEmail">
+      <div *ngIf="!isValidEmail()&& userEmail!==''" class="text-danger">
+        {{'emailValide' | translate}}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="confirmEmail()">{{'confirmer' | translate}}</button>
+    </div>
+  </ng-template>
+</div>

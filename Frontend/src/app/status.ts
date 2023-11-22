@@ -1,0 +1,6 @@
+export enum Status {
+    ROLE_ADMIN = 'ROLE_ADMIN',
+    ROLE_USER = 'ROLE_USER',
+    ROLE_SUPERUSER = 'ROLE_SUPERUSER',
+    ROLE_NEW = 'ROLE_NEW'
+}
