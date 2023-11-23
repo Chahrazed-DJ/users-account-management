@@ -1,7 +1,8 @@
 # User Account Management
-
-This is the English version of the README. For French, please refer to [README_FR.md](./README_FR.md).
-
+- This is the English version of the README. For French, please refer to [README_FR.md](./README_FR.md).
+- To access the specifications document, please refer to the following link:[Specifications document](https://drive.google.com/file/d/1ZbRJbui2HhhwNYSiML1IwqpsuYWkM36v/view?usp=drive_link)
+- To access the user manual, please consult the following link:[User manual](https://drive.google.com/file/d/1zXEIzFRr-f6THpy_6KZzmJXU9moQa4PH/view?usp=drive_link)
+- To access the technical documentation, please review the following link:[Technical documentation](https://drive.google.com/file/d/1TTG2v41qfE2vmybEEacFePotSjSKOjGq/view?usp=drive_link)
 ## Description
 
 >  CM Consulting intends to implement a simple yet effective user account management system. This system aims to facilitate the
