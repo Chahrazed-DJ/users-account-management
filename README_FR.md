@@ -1,6 +1,8 @@
 # Gestion des comptes utilisateurs
-Ceci est la version française du README. Pour l'anglais, veuillez consulter [README.md](./README.md).
-
+- Ceci est la version française du README. Pour l'anglais, veuillez consulter [README.md](./README.md).
+- Pour accéder au cahier de charge, veuillez consulter le lien suivant : [Cahier de charge](https://drive.google.com/file/d/1ZbRJbui2HhhwNYSiML1IwqpsuYWkM36v/view?usp=drive_link)
+- Pour accéder au manuel d'utilisation, veuillez consulter le lien suivant : [Manuel d'utilisation](https://drive.google.com/file/d/1zXEIzFRr-f6THpy_6KZzmJXU9moQa4PH/view?usp=drive_link)
+- Pour accéder au documentation technique, veuillez consulter le lien suivant : [Documentation Technique](https://drive.google.com/file/d/1TTG2v41qfE2vmybEEacFePotSjSKOjGq/view?usp=drive_link)
 ## Description
 
 > La société CM Consulting a l’intention de mettre en œuvre un système de gestion des
