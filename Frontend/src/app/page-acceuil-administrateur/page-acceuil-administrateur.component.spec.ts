@@ -8,9 +8,9 @@ describe('PageAcceuilAdministrateurComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageAcceuilAdministrateurComponent ]
+      declarations: [PageAcceuilAdministrateurComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(PageAcceuilAdministrateurComponent);
     component = fixture.componentInstance;

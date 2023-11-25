@@ -32,7 +32,7 @@ export class PageDetailprofilComponent implements OnInit {
     this.isFormSubmitted = true;
     if (this.validateForm() && this.isValidEmail()) {
       //modifier l'utilisateur
-      this.utilisateurService.updateUser(this.id, this.utilisateur).subscribe(data => {
+      this.utilisateurService.updateUser(this.utilisateur.id!, this.utilisateur).subscribe(data => {
         this.resetForm();
         this.navigateTo('administrateur/rechercherutilisateur');
       }

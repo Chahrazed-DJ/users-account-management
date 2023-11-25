@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Utilisateur } from '../utilisateur';
 import { UtilisateurServiceService } from '../utilisateur-service.service';
+import { Role } from '../role';
+import { Status } from '../status';
 
 @Component({
   selector: 'app-register-page',
@@ -25,8 +27,11 @@ export class RegisterPageComponent {
   onSubmit() {
     this.isFormSubmitted = true;
     if (this.validateForm() && this.isValidEmail()) {
+      const roles = [];
+      roles.push(new Role(Status.ROLE_NEW));
+      this.utilisateur.roles = roles;
       //ajouter l'utilisateur
-      this.utilisateurService.addUser(this.utilisateur).subscribe(data => {
+      this.utilisateurService.signUp(this.utilisateur).subscribe(data => {
         this.navigateTo('connexion');
       },
         error => console.log(error));

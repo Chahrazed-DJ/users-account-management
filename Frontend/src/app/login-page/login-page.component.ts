@@ -28,7 +28,7 @@ export class LoginPageComponent {
     this.isFormSubmitted = true;
     if (this.validateForm() && this.isValidEmail()) {
       //se connecter
-      this.utilisateurService.logIn(this.utilisateur.email, this.utilisateur.password).subscribe(data => {
+      this.utilisateurService.logIn(this.utilisateur).subscribe(data => {
         this.utilisateurService.profilUtilisateur = data;
         this.utilisateurService.isAuthenticated = true;
         if (this.utilisateurService.profilUtilisateur.roles.some(role => role.nom === 'ROLE_ADMIN')) {

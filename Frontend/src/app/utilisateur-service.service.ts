@@ -2,8 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Utilisateur } from './utilisateur';
 import { Observable } from 'rxjs';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,6 @@ import { TranslateService } from '@ngx-translate/core';
 export class UtilisateurServiceService implements CanActivate {
   profilUtilisateur: Utilisateur = new Utilisateur();
   isAuthenticated = false;
-  private URL = "http://localhost:8080/api/admin/utilisateurs";
   private currentLang: string;
 
   constructor(private httpClient: HttpClient,
@@ -41,33 +41,37 @@ export class UtilisateurServiceService implements CanActivate {
   isLoggedIn(): boolean {
     return this.isAuthenticated;
   }
+
+
   getUsers(): Observable<Utilisateur[]> {
-    return this.httpClient.get<Utilisateur[]>(`${this.URL}`);
+    return this.httpClient.get<Utilisateur[]>(`${environment.URL}`);
   }
 
   addUser(uti: Utilisateur): Observable<Object> {
-    return this.httpClient.post(`${this.URL}`, uti);
+    return this.httpClient.post(`${environment.URL}`, uti);
   }
 
   getUserById(id: number): Observable<Utilisateur> {
-    return this.httpClient.get<Utilisateur>(`${this.URL}/${id}`);
+    return this.httpClient.get<Utilisateur>(`${environment.URL}/${id}`);
   }
 
   updateUser(id: number, utilisateur: Utilisateur): Observable<Object> {
-    return this.httpClient.put(`${this.URL}/${id}`, utilisateur);
+    return this.httpClient.put(`${environment.URL}/${id}`, utilisateur);
   }
 
-  private cnxURL = "http://localhost:8080/api/auth/login";
-  logIn(email: string, password: string): Observable<Utilisateur> {
-    const privateData = {
-      email: email,
-      password: password
-    }
-    return this.httpClient.post<Utilisateur>(`${this.cnxURL}`, null, { params: privateData });
+
+  logIn(user: Utilisateur): Observable<Utilisateur> {
+    return this.httpClient.post<Utilisateur>(`${environment.loginURL}`, user);
   }
-  private dcnxURL = "http://localhost:8080/api/auth/logout";
+
+
+  signUp(user: Utilisateur): Observable<Utilisateur> {
+    return this.httpClient.post<Utilisateur>(`${environment.registerURL}`, user);
+  }
+
+
   logOut(): Observable<any> {
-    return this.httpClient.get<any>(`${this.dcnxURL}`);
+    return this.httpClient.get<any>(`${environment.logoutURL}`);
   }
 
 
